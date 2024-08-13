@@ -1,2 +1,0 @@
-- falta el mensaje de aun no hay consultas registradas
-- cambiar el color de las card
