@@ -45,7 +45,7 @@ export default {
       nuevoPaciente: '',
       nuevaFecha: '',
       nuevaHora: '',
-      gravedades: ["Baja", "Media", "Alta"],      
+      gravedades: ["baja", "media", "alta"],      
       nuevoMotivo: '',
       gravedadElegida: '',
       mensajeConsultas: '',

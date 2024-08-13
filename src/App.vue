@@ -5,7 +5,7 @@
         @agregarCita="recibirDatos"
       />
       
-      <section class="d-flex gap-2" >
+      <section class="d-flex row gap-2 p-4" >
         <CardRegistro v-for="(cita, index) in citas" 
           :key="index" 
           :cita = "cita"
@@ -37,15 +37,15 @@ export default {
   methods: {
     recibirDatos(cita){
       console.log(cita);
-      cita.color = this.obtenerColor(this.gravedadElegida);
+      cita.color = this.obtenerColor(cita.gravedadElegida);
       this.citas.push(cita);
     },
-    obtenerColor(){
-      if (this.gravedadElegida === 'baja') {
-        this.color = 'green';
-      } else if (this.gravedadElegida === 'media') {
+    obtenerColor(gravedad){
+      if (gravedad === 'baja') {
+        return 'green';
+      } else if (gravedad === 'media') {
         return 'yellow';
-      } else if (this.gravedadElegida === 'alta') {
+      } else if (gravedad === 'alta') {
         return 'red';
       } else{
         return 'white';
